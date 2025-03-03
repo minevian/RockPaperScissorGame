@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root{
+  font-family: "Inter",sans-serif;
+  overflow-y: hidden;
+}
+
+/** @type {import('tailwindcss').Config} */
+
+
+  
+ 
