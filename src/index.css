@@ -3,6 +3,7 @@
 :root{
   font-family: "Inter",sans-serif;
   overflow-y: hidden;
+  background-color: black;
 }
 
 /** @type {import('tailwindcss').Config} */

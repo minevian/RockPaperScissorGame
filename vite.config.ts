@@ -8,5 +8,6 @@ export default defineConfig({
     tailwindcss(),
    
   ],
-   base: 'https://github.com/minevian/RockPaperScissorGame'
+ base: '/RockPaperScissorGame/'
+
 })

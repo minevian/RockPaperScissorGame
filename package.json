@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://minevian.github.io/RockPaperScissorGame", 
+"homepage": "https://minevian.github.io/RockPaperScissorGame/",
   "scripts": {
     "dev": "vite",
-    "build": "react-scripts build && cp build/index.html build/404.html",
+    "build": "tsc -b && vite build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
