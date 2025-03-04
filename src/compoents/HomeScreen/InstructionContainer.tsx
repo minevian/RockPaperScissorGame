@@ -30,7 +30,7 @@ const navigate = useNavigate();
 
   const navigategamePage = () => {
     clickSound.play();
-    navigate('/game-dashboard')
+    navigate('/RockPaperScissorGame/game-dashboard')
   }
 
   return (

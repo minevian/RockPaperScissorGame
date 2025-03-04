@@ -17,8 +17,8 @@ const App =() => {
       <BackgroundMusic />
 
       <Routes>
-        <Route path="/" element={<HomePage />} /> {/* Ensure HomePage is inside Routes */}
-        <Route path="game-dashboard" element={<Game />} />
+        <Route path="/RockPaperScissorGame/" element={<HomePage />} /> {/* Ensure HomePage is inside Routes */}
+        <Route path="/RockPaperScissorGame/game-dashboard" element={<Game />} />
       </Routes>
     </BrowserRouter>
   )
