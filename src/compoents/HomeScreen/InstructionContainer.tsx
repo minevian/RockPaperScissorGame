@@ -40,7 +40,7 @@ const navigate = useNavigate();
           <img src={gameImage} alt="" />
         </div>
         <div>
-        <div className="text-sm md:text-md mt-10 md:mt-2 lg:text-2xl font-bold text-center mb-4">
+        <div className="text-sm md:text-md  md:mt-2 lg:text-2xl font-bold text-center mb-4">
         Dear {userName} !!
       </div>
 
@@ -59,13 +59,13 @@ const navigate = useNavigate();
           <div className="flex flex-col gap-8"><div className="mt-4">
             <TypingAnimation disPlayContent={totalRound} />
           </div>
-          <button className="flex justify-center items-center hover:text-yellow-500 hover:bg-yellow-100 bg-yellow-500 text-white px-4 py-2
-          cursor-pointer  rounded-md text-sm lg:text-lg"
-          onClick={navigategamePage}
-          >
-            Let's Start
-            
-            </button></div>
+          <button
+  className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-auto flex justify-center items-center bg-yellow-500 text-white px-4 py-2 cursor-pointer rounded-md text-sm lg:text-lg md:relative  md:transform-none md:w-auto hover:text-yellow-500 hover:bg-yellow-100"
+  onClick={navigategamePage}
+>
+  Let's Start
+</button>
+</div>
         )}
       </div>
 
