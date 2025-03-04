@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { RootState } from "../../Redux/store";
 import { goldenStart, InstructionHeading, totalRound } from "../Constant";
@@ -6,12 +6,14 @@ import TypingAnimation from "../common/TypingAnimation";
 import clickSoundEffect from '../../assets/Musics/click_sound_2.mp3'
 import { useNavigate } from "react-router-dom";
 import gameImage from '.././../assets/gameImage.png';
+import { IoCloseCircle } from "react-icons/io5";
+import { handleInstructionPopup } from "../../Redux/slice";
 const InstructionContainer = () => {
   const { userInput } = useSelector((state: RootState) => state.game);
   console.log(userInput);
   const userName = userInput?.name || "Guest";
 const navigate = useNavigate();
- 
+ const dispatch = useDispatch();
   const [showTotalRound, setShowTotalRound] = useState(false);
 
   const clickSound = new Howl({
@@ -35,11 +37,19 @@ const navigate = useNavigate();
 
   return (
     <div className="w-full h-screen md:h-100 mx-auto pt-20 bg-gray-900 text-white p-6 rounded-lg shadow-lg overflow-scroll md:overflow-hidden">
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex justify-end pr-7 relative bottom-12">
+          <IoCloseCircle className="text-2xl text-red-600 cursor-pointer" onClick={() => dispatch(handleInstructionPopup({isInstructionPopupOpen:false}))} />
+
+        </div>
+<div className="flex justify-between">
+
+      <div className="flex flex-col md:flex-row gap-8" >
         <div>
+        
           <img src={gameImage} alt="" />
         </div>
         <div>
+       
         <div className="text-sm md:text-md  md:mt-2 lg:text-2xl font-bold text-center mb-4">
         Dear {userName} !!
       </div>
@@ -72,7 +82,8 @@ const navigate = useNavigate();
         </div>
       </div>
       
-     
+      
+</div>
     </div>
   );
 };
