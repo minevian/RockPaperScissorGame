@@ -5,8 +5,8 @@
   "type": "module",
 "homepage": "https://minevian.github.io/RockPaperScissorGame/",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "vite",  
+    "build": "tsc -b && vite build  && cp public/404.html dist/",
     "predeploy" : "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
